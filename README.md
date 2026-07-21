@@ -49,7 +49,7 @@ Courses offered online are often overly priced for suspiciously low value qualit
 
 ## 🛠️ Tech Stack
 
-- Front End: Built using primarily HTML3 and CSS3 with a dash of JS
+- Front End: Built using primarily HTML5 and CSS3 with a dash of JS
 - Icons: Icons from [Font Awesome](https://fontawesome.com) and [Lordicon](https://lordicon.com) 💞
 
 ---
@@ -58,7 +58,7 @@ Courses offered online are often overly priced for suspiciously low value qualit
 
 Since Neuralite is a static front-end project (no backend), getting it running is quick.
 
-**Option 1 — Just open it**
+**Clone and Open**
 
 Clone the repo and open the entry file directly in your browser:
 
@@ -67,7 +67,7 @@ git clone https://github.com/MrTrachl/Neuralite.git
 cd Neuralite
 ```
 
-Then double-click `index.html` (or drag it into your browser).
+Then double-click any HTML file you wish to start on (`exam.html` is a good starting point — it links back to home, which links to the rest). (or drag a file into browser to view).
 
 ---
 
