@@ -1,5 +1,5 @@
 # Neuralite
-**Neuralite** &mdash; AI Powered Exam Platform (Design Mockup)
+**Neuralite** &mdash; AI Powered Exam Platform (Non-Functional Design Mockup)
 
 A clean and simple exam building, testing, and tracking web application concept that **pays its users to learn**.
 
