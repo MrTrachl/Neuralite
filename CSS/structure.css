@@ -1,0 +1,224 @@
+/* Structure*/
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+        background-color: #0d1117;
+        font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+        overflow: hidden;
+    }
+html {
+  --scrollbar-width: 10px;        /* overall scrollbar width (chromium/webkit) */
+  --scrollbar-thumb-color: #c9c9c9; /* thumb & arrows color (light grey) */
+  --scrollbar-thumb-hover: #bfbfbf;
+  --page-bg: #0d1117;             /* page background (used for visual padding) */
+  --thumb-inset: 3px;             /* visual inset to make thumb appear narrower than track */
+}
+html { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb-color) transparent; }
+
+main { overflow: hidden; }
+
+input, label, textarea, select, button { cursor: url("../icons/static/cursor.svg"), auto !important; }
+
+a { color: white; outline: none; }
+
+.container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+    .sidebar {
+        grid-area: sidebar;
+        /* background: rgb(36,36,36); */
+        background-color: #0d1117;
+        color: #fff;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 4;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+
+        position: fixed;
+        width: 80px;
+
+        border-right: 1px solid rgb(75,75,75);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 0 16px;
+        box-sizing: border-box;
+    }
+
+    .sidebar-spacer {
+        flex: 1 1 auto;
+    }
+
+    .sidebar-divider {
+        width: 60%;
+        border-top: 1px solid rgb(58, 56, 56);
+        margin: 6px 0;
+    }
+
+    .header {
+        grid-area: header;
+        /* background: rgb(40, 40, 40); */
+        
+        background-color: #0d1117;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        top: 0;
+        z-index: 3;
+        height: 60px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+
+        width: calc(100vw - 80px);
+        position: fixed;
+        left: 80px;
+    }
+    .header-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-content {
+        grid-area: main;
+        /* background: rgb(48, 48, 48); */
+        background-color: #0d1117;
+        overflow-y: auto;
+        height: calc(100vh - 60px);
+        position: relative;
+        left: -140px;
+        width: calc(100vw - 80px);
+    }
+
+    .nav-tab {
+        width: 48px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 2px 0;
+        padding: 0;
+
+        border-radius: 10px;
+
+        position: relative;
+    }
+    .nav-tab:hover {
+        cursor: pointer;
+        background-color: rgb(44, 45, 52);
+    }
+    .nav-tab.highlighted {
+        background-color: rgb(44,45,52);
+        border: 1px solid rgb(65,65,65);
+        border-bottom: 3px solid rgb(65,65,65);
+    }
+    .nav-tab img { height: 32px; width: 32px; }
+
+    .notif-dot {
+        border-radius: 50%;
+        background-color: rgb(177,151,252);
+        font-weight: bold;
+        font-size: 12px;
+        padding: 4px;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+
+        height: 12px;
+        width: 12px;
+
+        position: absolute; right: 5px; top: 5px;
+    }
+    .footer-info-text:hover {
+        color: rgb(177,151,252);
+    }
+
+
+input, label, textarea, select, button {
+  cursor: url("../icons/static/cursor.svg"), auto !important;
+}
+
+.nav-tab:hover, .button:hover, .control-bar-button:hover, .clickable:hover, .favorite-row:hover {
+  cursor: url("../icons/static/hand_cursor.svg"), pointer;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.opacity-button:hover {
+    opacity: 0.8;
+}
+
+.gooey-hover {
+
+transition:
+    background 0.3s,
+    filter 0.3s,
+    transform 0.7s cubic-bezier(.22, 1.7, .58, 1);
+  filter: none;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient( 90deg, rgb(200, 180, 255) 0%, rgb(177, 151, 252) 60%, rgb(140, 110, 220) 100%);
+  will-change: transform;
+}
+
+.gooey-hover:hover {
+  background: linear-gradient(90deg, rgb(200,180,255), rgb(177,151,252), rgb(140,110,220));
+  filter: url(#gooey-effect);
+  /* Optional: Add a subtle scale for more "liquid" feel */
+  transform: scale(1.07);
+  box-shadow: 0 0 24px 0 rgba(177,151,252,0.25);
+}
+
+.gooey-hover:active {
+    transform: scale(0.98);
+}
+
+.dashes {
+    height: 3px; width: 25px; 
+    border-radius: 6px; 
+    background-color: rgb(75,75,75);
+    margin: 0px 5px;
+}
+
+.gradient-text{
+  font-size: 20px;
+  font-weight: bold;
+  /* your gradient */
+  background: linear-gradient(
+    90deg,
+    rgb(200, 180, 255) 0%,
+    rgb(177, 151, 252) 60%,
+    rgb(140, 110, 220) 100%
+  );
+
+  /* clip the background to the text */
+  -webkit-background-clip: text; /* Chrome, Safari, Edge */
+  background-clip: text;         /* Firefox and others */
+
+  /* make the glyph fill transparent so background shows through */
+  -webkit-text-fill-color: transparent; /* Chrome, Safari */
+  color: transparent;                   /* fallback for Firefox */
+
+  /* optional */
+  display: inline-block; /* helpful if you want to control sizing/overflow */
+}

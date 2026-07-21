@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuralite | Building your Brain</title>
+
+
+    <link rel="stylesheet" href="../CSS/structure.css">
+    <link rel="icon" href="../icons/static/camera_eye.svg" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
+
+    <script defer src="../JS/nav-component.js"></script>
+    <script defer src="../JS/main.js"></script>
+</head>
+<body>
+    <div class="container">
+       <neuralite-nav active=""></neuralite-nav>
+
+        <header class="header" style="background-color: rgb(11, 15, 21)">
+            <div class="header-wrapper">
+                <span style="margin: 0px auto; border: 2px solid rgb(100, 100, 100); border-radius: 8px; width: 225px; height: 38px; position: relative;">
+                        <span class="header-tab" id="buildTab" style="font-family: Quicksand; font-weight: bold; font-size: 16px; width: 109px; height: 100%; display: inline-flex; align-items: center; justify-content: center; z-index: 200">
+                            <p style="z-index: 200;">Build</p>
+                        </span>
+                        <span class="header-tab" id="learnTab" style="font-family: Quicksand;  font-size: 16px; width: 109px; height: 100%; display: inline-flex; align-items: center; justify-content: center; z-index: 200;">
+                            <p style="z-index: 200;">Learn</p>
+                        </span>
+
+                        <span class="slider-indicator"></span>
+                </span>
+                <!-- Nothing right aligned -->
+            </div>
+        </header>
+        <main class="main-content" style="position: relative; left: -140px; display: flex; align-items: center; justify-content: center;">
+
+            <div style="width: min(750px, 90vw);">
+                <div style="font-family: Quicksand; font-size: 24px; text-align: center;">
+                    <p class="typewriter-text" data-fulltext="Study Project Management using AI"></p>
+
+
+                    <div class="queryInputWrapper animated-gradient-border" id="queryInputWrapper">
+                        <img src="../icons/static/magnify.svg" height="24" width="24">
+                        <input class="actualQueryInput" id="actualQueryInput" placeholder="Create your Exam" style="width: 88%; margin-left: 10px; margin-right: 40px;">
+                        <img id="planeSendButton" src="../icons/static/paper_plane.svg" height="24px;" width="24px;" style="display: inline-flex; padding: 10px; border-radius: 6px;">
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 25px;">
+                        <div class="sub-box" style="  display: inline-flex; align-items: center; gap: 6px;">
+                            <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: rgb(160, 160, 160); margin-right: 12px;">Difficulty Level:</span>
+
+                            <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: limegreen;">Easy</span>
+                        </div>
+
+                        <div class="sub-box" style=" display: inline-flex; align-items: center; gap: 6px;">
+                            <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: rgb(160, 160, 160); margin-right: 12px;">Question Length:</span>
+
+                            <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: white;">50</span>
+                        </div>
+
+                        <div class="sub-box" style=" display: inline-flex; align-items: center; gap: 6px;">
+                            <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: rgb(160, 160, 160); margin-right: 12px;">Time Duration:</span>
+
+                            <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: white;">30 Minutes</span>
+                        </div>
+                    </div>
+
+                    <div class="learn-sub-box"style="display: none;">
+                        <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: rgb(160, 160, 160); margin-right: 12x;">Token Limit -></span>
+
+                        <span style="font-family: Quicksand; font-size: 16px; font-weight: bold; color: white;">3/10</span>
+                    </div>
+
+                     <div class="learn-sub-box" style="display: none;">
+                        <div class="button" style="background-color: rgb(140, 110, 220); font-weight: bold; font-size: 16px; border-radius: 12px; height: 30px; width: fit-content; padding: 8px 14px; display: flex; align-items: center; justify-content: center; margin: 0px auto; margin-top: 25px;">
+                            <img src="../icons/static/sparkles.svg" height="24" width="24" style="margin-right: 5px;">
+                            Upgrade to Pro
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="position: absolute; left: 50%; transform: translate(-50%, -50%); bottom: 18px; color: rgb(144, 144, 144); font-family: Quicksand; font-size: 15px;">
+                Neuralite will generate an exam based on your requirements to hit hard points and identify weaknesses or just test your overall knowledge. <strong>AI can make mistakes.</strong>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+<svg width="0" height="0">
+  <filter id="gooey-effect">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+    <feColorMatrix in="blur" mode="matrix"
+      values="1 0 0 0 0  
+              0 1 0 0 0  
+              0 0 1 0 0  
+              0 0 0 18 -7" result="goo" />
+    <feBlend in="SourceGraphic" in2="goo" />
+  </filter>
+</svg>
+</html>
+
+/* home page specific styles */
+<style>
+main {
+    background: linear-gradient(
+        180deg,
+        rgb(11, 15, 21) 0%,
+        rgb(13, 17, 23) 55%,
+        rgb(24, 27, 34) 100%
+    );
+}
+    .actualQueryInput {
+        background-color: #0d1117;
+        font-size: 18px; 
+        outline: none;
+        border: none;
+        color: white;
+        caret-color: white;
+        background: #181a1b;
+
+        background: none;
+    }
+
+    .queryInputWrapper {
+         background-color: #0d1117;
+        width: min(625px, 100%); height: 54px; border-radius: 30px; 
+        margin: 40px auto 25px auto; 
+        /* border: 2px solid rgb(100,100,100);  */
+        padding: 5px 20px; display: flex; align-items: center;
+        box-sizing: border-box;
+    }
+
+    #planeSendButton:hover {
+        background-color: rgb(65,65,65);
+    }
+
+/* Input field styles */
+.animated-gradient-border {
+  position: relative;
+  z-index: 1;
+  background: #181a1b;
+  border-radius: 12px;
+  overflow: hidden;
+
+  background: linear-gradient(
+  90deg,
+  rgba(200,180,255, 0.12) 0%,      /* Soft purple tint, very transparent */
+  rgba(177,151,252, 0.10) 40%,     /* Even softer in the middle */
+  #181a1b 100%                     /* Fade smoothly to your base color */
+);
+}
+
+.animated-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgb(200,180,255), rgb(177,151,252), rgb(140,110,220));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+.animated-gradient-border::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 0px; /* width of the light */
+  border-radius: 12px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.1) 80%);
+  filter: blur(2px);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 3;
+  transform: translateX(var(--light-x, 0));
+  transition: transform 0.5s cubic-bezier(.22,1.7,.58,1);
+}
+.header-tab {
+    z-index: 200;
+}
+.slider-indicator {
+    border-radius: 6px; background-color: rgb(177, 151, 252);
+    height: 38px;
+    width: 110px;
+    transition: transform .50s cubic-bezier(.22, 1.5, .58, 1);
+
+    position: absolute;
+    bottom: 0px; left: 0px;
+}
+</style>
+
+<script>
+function typeAndEraseLoop(element, texts, typeSpeed = 1750, eraseSpeed = 1750, waitTime = 4000) {
+  let textIndex = 0;
+  let charIndex = 0;
+  let isErasing = false;
+  const baseWord = "Study";
+
+  function typeLoop() {
+    const currentText = texts[textIndex];
+    if (!isErasing) {
+      if (charIndex < currentText.length) {
+        element.textContent += currentText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeLoop, typeSpeed);
+      } else {
+        setTimeout(() => {
+          isErasing = true;
+          setTimeout(typeLoop, eraseSpeed);
+        }, waitTime);
+      }
+    } else {
+      if (charIndex > baseWord.length) {
+        element.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+         setTimeout(typeLoop, eraseSpeed);
+      } else {
+        isErasing = false;
+        textIndex = (textIndex + 1) % texts.length;
+        // Start next phrase from baseWord
+        element.textContent = baseWord;
+        charIndex = baseWord.length;
+        setTimeout(typeLoop, typeSpeed);
+      }
+    }
+  }
+  // Initialize with baseWord
+  element.textContent = baseWord;
+  charIndex = baseWord.length;
+  typeLoop();
+}
+
+// Usage example:
+document.addEventListener("DOMContentLoaded", function() {
+  const target = document.querySelector('.typewriter-text');
+  if (target) {
+    typeAndEraseLoop(
+      target,
+      [
+        "Study Anything using AI",
+        "Study Software Development using AI",
+        "Study Project Management using AI",
+        "Study Quantum Theory using AI",
+        "Study Nursing Practice using AI",
+        "Study Stocks & Finance using AI",
+        "Study Data Analysis using AI",
+        "Study Social Media Marketing using AI",
+        "Study Automotive Mechanics using AI",
+        "Study Real Estate using AI",
+        "Study Thermodynamics using AI",
+        "Study Algebraic Formulas using AI",
+        "Study Civil Engineering using AI"
+      ],
+      40,   // typing speed (ms)
+      25,   // erasing speed (ms)
+      1200  // wait time before erasing (ms)
+    );
+  }
+});
+</script>
+
+<script>
+    // Tab swappers
+    const actualQueryInput = document.getElementById("actualQueryInput");
+
+    const headerTabs = document.querySelectorAll(".header-tab");
+    const slider = document.querySelector(".slider-indicator");
+
+    const learnBoxes = document.querySelectorAll(".learn-sub-box")
+    const boxes = document.querySelectorAll(".sub-box");
+
+    headerTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            if(tab.id === "buildTab") {
+                slider.style.transform = `translateX(0%)`;
+                document.getElementById("learnTab").style.fontWeight = "normal";
+                document.getElementById("buildTab").style.fontWeight = "bold";
+
+                actualQueryInput.placeholder = "Create your Exam";
+
+                learnBoxes.forEach((box) => {
+                    box.style.display = "none";
+                });
+
+                boxes.forEach((box) => {
+                    box.style.display = "block";
+                });
+            } else
+            if(tab.id === "learnTab") {
+                document.getElementById("buildTab").style.fontWeight = "normal";
+                document.getElementById("learnTab").style.fontWeight = "bold";
+                slider.style.transform = `translateX(105%)`;
+
+                actualQueryInput.placeholder = "Learn Anything";
+
+                boxes.forEach((box) => {
+                    box.style.display = "none";
+                });
+                
+                learnBoxes.forEach((box) => {
+                    box.style.display = "block";
+                });
+            }
+        });
+    });
+</script>
+
+<script>
+    document.getElementById("queryInputWrapper").addEventListener("click", () => {
+        document.getElementById("actualQueryInput").focus();
+    });
+</script>

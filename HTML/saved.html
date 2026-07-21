@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuralite - Favorites</title>
+
+    <script defer src="../JS/nav-component.js"></script>
+    <link rel="stylesheet" href="../CSS/structure.css">
+   
+    <link rel="icon" href="../icons/static/camera_eye.svg" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
+
+     <script defer src="../JS/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <neuralite-nav active="favorites"></neuralite-nav>
+
+        <header class="header">
+            <div class="header-wrapper">
+                <div style="font-family: Quicksand; font-weight: bold; font-size: 20px; margin: 0px auto;">
+                    Review your Favorites 
+                </div>
+            </div>
+        </header>
+        <main class="main-content" style="position: relative; padding-bottom: 0px;">
+
+            <div style="position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 0; bottom: 0; margin-top: 20px; margin-bottom: auto; width: 750px; height: 400px;">
+                <div style="font-family: Quicksand, Helvetica, Arial; font-size: 24px; margin-left: 25px;">
+
+                    <!-- <h2>Favorites List</h2> -->
+
+                    <table class="favorites-table">
+                        <thead>
+                            <tr>
+                                <th class="col-topic">Topic</th>
+                                <th class="col-snippet">Question Snippet</th>
+                                <th class="col-result">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="favorite-row">
+                                <td class="col-topic">Physics</td>
+                                <td class="col-snippet">What is the cosine of the following sequence</td>
+                                <td class="col-result">
+                                    <img src="../icons/static/circle_x.svg" height="32px;" width="32px;" alt="Incorrect">
+                                </td>
+                            </tr>
+                            <tr class="favorite-row">
+                                <td class="col-topic">Physics</td>
+                                <td class="col-snippet">What is the weight difference between the following</td>
+                                <td class="col-result">
+                                    <img src="../icons/static/circle_check.svg" height="32px;" width="32px;" alt="Correct">
+                                </td>
+                            </tr>
+                            <tr class="favorite-row">
+                                <td class="col-topic">Algebra</td>
+                                <td class="col-snippet">Which of the following equations works best to fix</td>
+                                <td class="col-result">
+                                    <img src="../icons/static/circle_check.svg" height="32px;" width="32px;" alt="Correct">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="position: absolute; left: 50%; transform: translate(-50%, -50%); bottom: 20px; font-family: Quicksand; font-size: 15px; font-weight: bold; color: rgb(160, 160, 160); text-align: center; padding: 20px;">
+                <span class="footer-info-text clickable">Neuralite</span>
+                <span>|</span>
+                <span class="footer-info-text clickable">Terms and Conditions</span>
+                <span>|</span>
+                <span class="footer-info-text clickable">Privacy Policy</span>
+            </div>
+        </main>
+    </div>
+</body>
+
+<svg width="0" height="0">
+  <filter id="gooey-effect">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+    <feColorMatrix in="blur" mode="matrix"
+      values="1 0 0 0 0  
+              0 1 0 0 0  
+              0 0 1 0 0  
+              0 0 0 18 -7" result="goo" />
+    <feBlend in="SourceGraphic" in2="goo" />
+  </filter>
+</svg>
+</html>
+
+<style>
+    .favorites-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .favorites-table th {
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(50, 50, 50);
+    }
+    .favorites-table td {
+        font-size: 18px;
+        text-align: center;
+        height: 55px;
+    }
+    .col-topic { width: 20%; }
+    .col-snippet { width: 60%; }
+    .col-result { width: 20%; }
+
+    .favorite-row:hover { color: rgb(200, 180, 255); }
+    .favorite-row:hover .col-topic { font-weight: bold; }
+</style>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuralite - Taking a Exam</title>
+
+    <link rel="icon" href="../icons/static/camera_eye.svg" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script defer src="../JS/exam.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <header class="header" style="left: 0px; width: 100%;">
+            <div id="questionBankBlock" class="fade-transition fade-hidden">
+                <span id="backArrowForQuestionSelection" style="border-radius: 6px; display: inline-flex; align-items: center; padding: 0px 10px; margin-left: 15px;">
+                    <img src="../icons/static/arrow_left.svg"height="24px;" width="24px;">
+                    <p style="font-weight: bold; margin-left: 5px;">Back</p>
+                </span>
+
+                <span class="questionNumberSelection">40</span>
+                <span class="questionNumberSelection">41</span>
+                <span class="questionNumberSelection">42</span>
+                <span class="questionNumberSelection">43</span>
+                <span class="questionNumberSelection">44</span>
+                <span class="questionNumberSelection questionHighlighted" style="background-color: rgb(177, 151, 252)">45</span>
+                <span class="questionNumberSelection">46</span>
+                <span class="questionNumberSelection">47</span>
+                <span class="questionNumberSelection">48</span>
+                <span class="questionNumberSelection">49</span>
+                <span class="questionNumberSelection">50</span>
+
+                <span id="forwardArrowForQuestionSelection" style="border-radius: 6px; display: inline-flex; align-items: center; padding: 0px 10px; margin-right: 15px;">
+                    <p style="font-weight: bold; margin-right: 5px;">Next</p>
+                    <img src="../icons/static/arrow_right.svg" height="24px;" width="24px;">
+                </span>
+            </div>
+
+            <div id="mainTestBlock" class="fade-transition">
+                
+                <img id="exit-button" onclick="toggleMenu()" src="../icons/static/left_exit.svg" height="30px;" width="30px;" style="margin-left: 25px; cursor: pointer;">
+                
+                <h4 style="margin-left: 25px; font-weight: normal;">Difficult Level Java Exam</h4>
+                <h3 id="currentQuestionOverTotalQuestion" style="position: absolute; left: 50%; transform: translateX(-50%); cursor: pointer; padding: 6px 8px; border-radius: 8px;">44/50</h3>
+                <img style="position: absolute; right: 25px; border-radius: 8px;" src="../icons/pfp/github_pfp.jpg" height="38px;" width="38px;">
+            </div>
+        </header>
+        <main class="main-content" style="position: relative;">
+            <div class="slider-container" style="position: relative; display: flex; align-items: center; justify-content: center;">
+                <div class="slide-frame active" id="slideFrame1" style="height: auto; min-height: 750px; padding-bottom: 175px;">
+                <div style="width: 750px; height: auto; margin: 25px auto 0px auto;">
+                    <div style="margin: 10px auto 10px auto; font-weight: bold;">Question 44</div>
+
+                    <div style="font-family: 'JetBrains Mono', ui-monospace;" id="question44">
+                        <br>
+                            <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Consider the following program.</div>
+                        <br><br>
+                        <div class="code-snippet-block">
+                                public class TestClass implements Runnable {   
+                        <br><br>
+                            &nbsp;&nbsp;&nbsp;volatile int x;   
+                        <br><br>
+                            &nbsp;&nbsp;&nbsp;public void run() { x = 5; }    
+                        <br><br>  
+                            &nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+                        <br>       
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TestClass tc = new TestClass();       
+                        <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tc.x = 10;       
+                        <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thread.ofVirtual().start(tc); // 1   
+                        <br>    
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(tc.x);   
+                        <br>
+                            &nbsp;&nbsp;&nbsp;}  
+                        <br>
+                        }  
+                        <br>
+                        </div>
+                        <br>
+                        <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">What will it print when run?</div>
+                    </div>
+
+                    <div id="answer44">
+                        <br>
+                        <div style="margin: 10px auto 10px auto; font-weight: bold;">Choose one of the following.</div>
+                        <br>
+                        <form>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="A" style="height: 20px; width: 20px; margin-right: 10px;">
+                            5
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="B" style="height: 20px; width: 20px; margin-right: 10px;">
+                            10
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="C" style="height: 20px; width: 20px; margin-right: 10px;">
+                            It will not compile
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="D" style="height: 20px; width: 20px; margin-right: 10px;">
+                            Exception at runtime
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="E" style="height: 20px; width: 20px; margin-right: 10px;">
+                            The output cannot be determined
+                        </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-frame offscreen" id="slideFrame2" style="height: auto; min-height: 800px; padding-bottom: 175px; position: absolute;">
+                <div style="width: 750px; height: auto; margin: 25px auto 0px auto;">
+                    <div style="margin: 135px auto 10px auto; font-weight: bold;">Question 45</div>
+
+                    <div style="font-family: 'JetBrains Mono', ui-monospace;" id="question45">
+                        <br>
+                           <div style="line-height: 1.6; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">What will be the result of attempting to compile a java source file TopClass.java containing all the following code? </div>
+                        <br><br>
+                        <div class="code-snippet-block">
+                            package test;  
+                        <br>
+                        <br>
+                        public class TopClass {
+                        <br>    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public Inner inner1 = new Inner() {
+                        <br>        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private static int value;  
+                        <br>      
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void doA() {  System.out.println("doing A"); }   
+                        <br>  
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};      
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void doA() { 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inner1.doA(); 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+                        <br>
+                        }  
+                        <br>
+                        <br>
+                        class Inner {   
+                        <br> 
+                        &nbsp;&nbsp;&nbsp;int value; 
+                        <br>
+                        }
+                        </div>
+                    </div>
+
+                    <div id="answer45">
+                        <br>
+                        <div style="margin: 10px auto 10px auto; font-weight: bold;">Choose one of the following.</div>
+                        <br>
+                        <form>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="A" style="height: 20px; width: 20px; margin-right: 10px;">
+                            The class will fail to compile because the class Inner has not been declared before being referenced in class TopClass.
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="B" style="height: 20px; width: 20px; margin-right: 10px;">
+                            The class will fail to compile because inner is a keyword.
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="C" style="height: 20px; width: 20px; margin-right: 10px;">    
+                            The class will fail to compile, since the class Inner must be defined in a file called Inner.java
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="D" style="height: 20px; width: 20px; margin-right: 10px;">
+                            The classes will compile.
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="E" style="height: 20px; width: 20px; margin-right: 10px;">
+                            The class will fail to compile because inner class cannot have a static field.
+                        </label>
+                        <br>
+                        <label style="font-size: 18px; display: flex; align-items: center;">
+                            <input type="radio" name="question1" value="F" style="height: 20px; width: 20px; margin-right: 10px;">
+                            None of these.
+                        </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div style="position: fixed; bottom: 25px; left: 50%;transform: translateX(-50%); width: fit-content; display: flex; align-items: center;">
+                <div class="star-button" id="starQuestionButton" style="margin-right: 18px; border-radius: 50%; background-color: rgba(36,36,36, 0.15); border: 1px solid rgb(75,75,75); height: 60px; width: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                    <img id="starQuestionImg" src="../icons/static/star.svg" height="30px;" width="30px;">
+                </div>
+
+                <div style="width: 300px; display: flex; align-items: center; height: 60px; background-color: rgba(36,36,36, 0.15); border-radius: 36px; border: 1px solid rgb(75,75,75); position: relative; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                    <span class="control-bar-button button" id="prevQuestionButton" style="border-radius: 50%; padding: 8px; margin: 8px; position: absolute; left: 0px;">
+                        <img src="../icons/static/prev_unfilled.svg" height="32px" width="32px">
+                    </span>
+
+                    <span style="position: absolute; left: 50%; transform: translateX(-50%);">
+                        <p class="timer-display" style="font-weight: bold; font-size: 15px; letter-spacing: 1.4;">2:30:00</p>
+                    </span>
+
+                    <span class="control-bar-button button" id="nextQuestionButton" style="border-radius: 50%; padding: 8px; margin: 8px; margin-left: 15px; position: absolute; right: 0px;">
+                        <img src="../icons/static/next_unfilled.svg" height="32px" width="32px">
+                    </span>
+                </div>
+
+                <div class="button" id="calculatorButton" style="margin-left: 18px; border-radius: 50%; background-color: rgba(36,36,36, 0.15); border: 1px solid rgb(75,75,75); height: 60px; width: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                    <img id="calculatorButtonImg" src="../icons/static/calculator.svg" height="30px;" width="30px;">
+                </div>
+
+                <span class="createNoteButton" style="position: absolute; right: -365px; height: 60px; width: fit-content; display: flex; align-items: center; padding: 0px 18px; border-radius: 40px; border: 1px solid rgb(50, 50, 50);">
+                    <p style="font-family: Quicksand; font-weight: bold; font-size: 15px;">Notes</p>
+                    <img src="../icons/static/note_add.svg" height="30px;" width="30px;" style="margin-left: 6px;">
+                </span>
+            </div>
+        </main>
+    </div>
+
+
+<!-- Verify Exit Popup -->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="leave-modal" id="menu-content" role="dialog" aria-modal="true" aria-labelledby="leaveTitle">
+
+        <!-- Icon badge -->
+        <div class="leave-icon">
+            <img src="../icons/static/warning.svg" height="26" width="26" alt="">
+        </div>
+
+        <!-- Title + question -->
+        <h2 class="leave-title" id="leaveTitle">Leave Exam?</h2>
+        <p class="leave-lead">Are you sure you want to leave this exam?</p>
+
+        <!-- Divider -->
+        <div class="leave-divider"></div>
+
+        <!-- Supporting copy -->
+        <p class="leave-body">
+            Your exam will stay in your portal, but leaving now
+            <strong>voids any points you've earned</strong> this attempt.
+        </p>
+
+        <!-- Actions -->
+        <div class="leave-actions">
+            <a href="home.html" class="leave-btn leave-btn--exit button">
+                Exit Test
+                <img src="../icons/static/person_exit.svg" height="20" width="20" alt="">
+            </a>
+            <button class="leave-btn leave-btn--stay button" onclick="closePopup()">
+                Continue Test
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<style>
+
+input, label, textarea, select, button {
+  cursor: url("../icons/static/cursor.svg"), auto !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: #0d1117;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+
+    overflow: hidden;
+}
+
+html {
+    scrollbar-width: thin;
+    
+    scrollbar-color: var(--scrollbar-thumb-color) transparent;
+}
+main {
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.button:hover {
+  cursor: url("../icons/static/hand_cursor.svg"), pointer;
+}
+
+
+.app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "header"
+        "main";
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.sidebar {
+    grid-area: sidebar;
+
+    background-color: #0d1117;
+    color: #fff;
+    top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 4;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+
+        position: fixed;
+        width: 80px;
+
+        border-right: 2px solid rgb(75,75,75);
+    }
+
+    .header {
+        grid-area: header;
+        
+        background-color: #0d1117;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        top: 0;
+        z-index: 3;
+        height: 60px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+        width: 100%;
+        position: fixed;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .main-content {
+        grid-area: main;
+
+        background-color: #0d1117;
+        overflow-y: auto;
+        height: 100%;
+        position: relative;
+        
+        width: 100vw;
+    }
+
+:root {
+    --dur {
+    --press-scale: 0.90;
+    --press-opacity: 0.85;
+    --dur: 160ms;
+    --easing: cubic-bezier(.2,.8,.2,1);
+    }
+}
+    
+:root {
+  /* tune these */
+  --scrollbar-width: 10px;
+  --scrollbar-thumb-color: #c9c9c9;
+  --scrollbar-thumb-hover: #bfbfbf;
+  --page-bg: #0d1117;
+  --thumb-inset: 3px;
+}
+
+
+
+/* 
+<==============================================>
+    -> Header Styles | Header Swap Styles  <-
+<==============================================>
+*/
+
+ .control-bar-button {
+    height: 40px; width: 40px;
+    display: flex; align-items: center; justify-content: center;
+    transform: var(--dur) var(--easing);
+    opacity: var(--dur) ease;
+}
+
+.control-bar-button:active {
+    transform: scale(0.96);
+    opacity: 0.65
+}
+
+#questionBankBlock {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questionNumberSelection {
+    height: 30px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 30px;
+
+    display: inline-flex;
+    column-gap: 5px;
+}
+.questionNumberSelection:hover {
+    cursor: pointer;
+    opacity: 0.75;
+    background-color: rgb(44,44,44);
+}
+#mainTestBlock {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#currentQuestionOverTotalQuestion:hover {
+    background-color: rgb(44, 45, 52);
+}
+
+.questionHighlighted {
+    background-color: rgb(177, 151, 252);
+    font-weight: bold;
+ }
+
+.fade-transition {
+  transition: opacity 0.35s cubic-bezier(.22,1.7,.58,1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fade-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+/* 
+<==============================================>
+    -> Frame Body Styles & Sliding Effect <-
+<==============================================>
+*/
+.code-snippet-block {
+    border: 2px solid rgb(65,65,65);
+    padding: 25px;
+    width: auto;
+    border-radius: 8px;
+
+    background-color: rgba(36, 36, 36, 0.8);
+    border: 1px solid rgb(75, 75, 75);
+
+    letter-spacing: 0.35px;
+    line-height: 1.5;
+}
+
+.slide-frame {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+    transform: translateX(0);
+
+    flex: 0 0 100%;
+}
+.offscreen {
+    transform: translateX(200%);
+}
+.slide-frame.active {
+    transform: translateX(0);
+}
+.slide-frame.slide-in {
+    transform: translateX(0%);
+}
+.slide-frame.slide-out {
+  transform: translateX(-200%);
+  /* display: none; */
+}
+.slide-frame.hidden {
+    display: none;
+}
+
+
+
+/* 
+<=====================================>
+    -> HUD Toolbar Button Styles <-
+<=====================================>
+*/
+#starQuestionButton {
+        position: relative;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Golden ring that bursts outward when a question is starred */
+    #starQuestionButton::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: 0 0 0 0 rgba(255, 200, 60, 0);
+    }
+    #starQuestionButton.star-burst::after {
+        animation: starRingBurst 0.6s ease-out;
+    }
+    @keyframes starRingBurst {
+        0%   { box-shadow: 0 0 0 0 rgba(255, 200, 60, 0.55); }
+        100% { box-shadow: 0 0 0 20px rgba(255, 200, 60, 0); }
+    }
+
+    /* Persistent soft glow while the question is starred */
+    #starQuestionButton.starred {
+        border-color: rgba(255, 200, 60, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 16px rgba(255, 200, 60, 0.35);
+    }
+
+    /* Springy pop of the star icon on every toggle */
+    #starQuestionImg.star-pop {
+        animation: starPop 0.5s cubic-bezier(.22, 1.7, .58, 1);
+    }
+    @keyframes starPop {
+        0%   { transform: scale(1) rotate(0); }
+        35%  { transform: scale(1.35) rotate(-14deg); }
+        60%  { transform: scale(0.9) rotate(9deg); }
+        100% { transform: scale(1) rotate(0); }
+    }
+
+    .star-button {
+        animation: starEffect 1s;
+    }
+
+    @keyframes starEffect {
+        from, to {
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+
+/* 
+<=====================================>
+    -> Popup Verification Styles <-
+<=====================================>
+*/
+.overlay {
+        position: fixed; /* Stretches the overlay to cover the entire screen */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.55); /* Semi-transparent black */
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: 9999998; /* Behind the menu */
+        visibility: hidden; /* Initially hidden */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .overlay.show {
+        visibility: visible;
+        opacity: 1;
+    }
+    .kebab-menu {
+        position: relative;
+        display: inline-block;
+        z-index: 9999999;
+    }
+
+    #closeMenu {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+    .popup-close-button {
+       
+        border: none;
+        cursor: pointer;
+       
+        border-radius: 8px;
+
+        height: 40px;
+        width: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+        background-color: rgb(15, 15, 15);
+    }
+    .popup-close-button:hover {
+        background-color: rgb(63, 61, 61);
+    }
+
+    .leave-modal {
+        --accent: #8c6edc;
+        --accent-glow: rgba(140, 110, 220, 0.45);
+        --surface-border: rgba(255, 255, 255, 0.08);
+        --text-muted: rgba(255, 255, 255, 0.6);
+        --ease-spring: cubic-bezier(.22, 1.7, .58, 1);
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        max-width: calc(100vw - 40px);
+        padding: 32px 32px 24px;
+        box-sizing: border-box;
+        z-index: 9999999;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        border-radius: 20px;
+        border: 1px solid var(--surface-border);
+        background: radial-gradient(circle at 50% 0%, #23272f 0%, #1a1d24 70%, #15171c 100%);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+
+        color: #fff;
+        font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+        /* motion */
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -46%) scale(0.92);
+        transition: opacity 0.28s ease, transform 0.38s var(--ease-spring);
+    }
+    .leave-modal.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .leave-icon {
+        height: 56px;
+        width: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(229, 83, 75, 0.12);
+        border: 1px solid rgba(229, 83, 75, 0.35);
+        margin-bottom: 20px;
+    }
+
+    .leave-title {
+        margin: 0 0 6px;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+    }
+    .leave-lead {
+        margin: 0 0 22px;
+        font-size: 15px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.85);
+    }
+    .leave-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--surface-border) 20%, var(--surface-border) 80%, transparent);
+        margin-bottom: 22px;
+    }
+    .leave-body {
+        margin: 0 0 28px;
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--text-muted);
+    }
+    .leave-body strong { color: #fff; font-weight: 600; }
+
+    .leave-actions {
+        display: flex;
+        gap: 12px;
+        width: 100%;
+    }
+    .leave-btn {
+        flex: 1;
+        height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        border: none;
+        border-radius: 12px;
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+        transition: transform 0.15s var(--ease-spring), box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .leave-btn:active { transform: scale(0.97); }
+
+    .leave-btn--exit {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--surface-border);
+    }
+    .leave-btn--exit:hover {
+        background: rgba(229, 83, 75, 0.15);
+        border-color: rgba(229, 83, 75, 0.4);
+    }
+
+    .leave-btn--stay {
+        background: var(--accent);
+        box-shadow: 0 6px 20px var(--accent-glow);
+    }
+    .leave-btn--stay:hover {
+        background: #9b7fe8;
+        box-shadow: 0 8px 26px var(--accent-glow);
+    }
+</style>
