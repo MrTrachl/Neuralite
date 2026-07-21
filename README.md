@@ -54,4 +54,21 @@ Courses offered online are often overly priced for suspiciously low value qualit
 
 ---
 
+## 🚀 Run Locally
+
+Since Neuralite is a static front-end project (no backend), getting it running is quick.
+
+**Option 1 — Just open it**
+
+Clone the repo and open the entry file directly in your browser:
+
+```bash
+git clone https://github.com/MrTrachl/Neuralite.git
+cd Neuralite
+```
+
+Then double-click `index.html` (or drag it into your browser).
+
+---
+
 *Built by Ian Trachl — [github.com/MrTrachl](https://github.com/MrTrachl)*
